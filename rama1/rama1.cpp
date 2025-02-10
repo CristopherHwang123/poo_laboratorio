@@ -49,9 +49,9 @@ void agregarProducto(vector<Producto>& inventario) {
 	int codigo, stock;
 	float precio;
 	cout << "Ingrese el nombre del producto: ";
-	cin >> ws; // Limpia el buffer de entrada
+	cin >> ws; 
 	getline(cin, nombre);
-	cout << "Ingrese el código: ";
+	cout << "Ingrese el codigo: ";
 	cin >> codigo;
 	cout << "Ingrese el precio: ";
 	cin >> precio;
@@ -71,7 +71,7 @@ void mostrarInventario(vector<Producto>& inventario) {
 }
 void buscarProducto(vector<Producto>& inventario) {
 	int codigo;
-	cout << "Ingrese el código del producto a buscar: ";
+	cout << "Ingrese el codigo del producto a buscar: ";
 	cin >> codigo;
 	for (Producto& producto : inventario) {
 		if (producto.obtenerCodigo() == codigo) {
@@ -84,7 +84,7 @@ void buscarProducto(vector<Producto>& inventario) {
 }
 void actualizarStock(vector<Producto>& inventario) {
 	int codigo, cantidad;
-	cout << "Ingrese el código del producto a actualizar: ";
+	cout << "Ingrese el codigo del producto a actualizar: ";
 	cin >> codigo;
 	for (Producto& producto : inventario) {
 		if (producto.obtenerCodigo() == codigo) {
@@ -124,7 +124,7 @@ int main() {
 		case 4: actualizarStock(inventario); break;
 		case 5: calcularValorTotal(inventario); break;
 		case 6: cout << "Saliendo del programa...\n"; break;
-		default: cout << "Opción no válida, intente de nuevo.\n";
+		default: cout << "Opcion no valida, intente de nuevo.\n";
 		}
 	} while (opcion != 6);
 	return 0;
